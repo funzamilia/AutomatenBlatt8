@@ -45,6 +45,10 @@ public class Test {
 	public static int min(int m, int n) {
 		return (diff(add(m, n), max(m, n)));
 	}
+	
+	public static int less(int m, int n) {
+		return (diff(diff(add(min(m, n), 1), m), diff(add(m, 1), n)));
+	}
 
 	public static void main(String[] args) {
 		System.out.println(diff(11, 1));
@@ -52,6 +56,7 @@ public class Test {
 		System.out.println(odd(92));
 		System.out.println(min(25, 7));
 		System.out.println(max(5, 0));
+		System.out.println(less(0, 1));
 	}
 
 }
