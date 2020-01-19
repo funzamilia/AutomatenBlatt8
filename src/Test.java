@@ -37,11 +37,21 @@ public class Test {
 			return (diff(2, add(odd(diff(n, 1)), 1)));
 		}
 	}
+	
+	public static int max(int m, int n) {
+		return (add(diff(m, n), n));
+	}
+	
+	public static int min(int m, int n) {
+		return (diff(add(m, n), max(m, n)));
+	}
 
 	public static void main(String[] args) {
 		System.out.println(diff(11, 1));
 		System.out.println(absdiff(3, 8));
 		System.out.println(odd(92));
+		System.out.println(min(25, 7));
+		System.out.println(max(5, 0));
 	}
 
 }
